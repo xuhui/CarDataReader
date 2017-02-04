@@ -18,12 +18,13 @@ import json
 # Link do navodil https://github.com/zejn/arsoapi
 #---------------------------------------------------------*/
 def getVreme(lat, lon):
-  napoved="Vreme bo..."
-  
-  
-  
-  
-  return napoved
+    link = "https://opendata.si/vreme/report/?lat=" + str(lat) + "&lon=" + str(lon)
+    webPage = urllib.request.urlopen(link)
+    content = webPage.read()
+
+    weather = json.loads(content.decode("utf-8"))
+
+    return content
 
 #-------------------------------------------------------
 # DOBI lokacijo v obliki lat pa lon
@@ -50,4 +51,4 @@ def getPromet(lat, lon):
 
     return promet
 
-getPromet(46.4221890,14.9262910)
+print (getVreme(46.4221890,14.9262910));
