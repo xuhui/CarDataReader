@@ -7,7 +7,11 @@ WORDS = ["EVENTS", "ROAD"]
 
 
 def getPromet(lat, lon):
-
+    # -------------------------------------------------------
+    # DOBI lokacijo v obliki lat pa lon
+    # VRNE bližnje dogodke kot array da jasper direkt pove
+    # Link do navodil https://github.com/zejn/arsoapi
+    # ---------------------------------------------------------*/
     promet = []
     range = 20 #km
     currentLocation = (lat, lon)
