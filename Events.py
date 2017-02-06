@@ -1,4 +1,4 @@
-import urllib.request
+import urllib2
 from haversine import haversine
 import json
 import re
@@ -16,7 +16,7 @@ def getPromet(lat, lon):
     range = 20 #km
     currentLocation = (lat, lon)
     link = "http://janliber.spletniki.si/"
-    webPage = urllib.request.urlopen(link)
+    webPage = urllib2.urlopen(link)
     content = webPage.read()
 
 
