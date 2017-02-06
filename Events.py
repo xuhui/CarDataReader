@@ -53,4 +53,4 @@ def isValid(text):
         Arguments:
         text -- user-input, typically transcribed speech
     """
-    return bool(re.search(r'\bevents\b', text, re.IGNORECASE))
+    return bool(re.search(r'\bevents on the road\b', text, re.IGNORECASE))
